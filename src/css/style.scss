@@ -1,0 +1,206 @@
+//MEDIA
+$media-s-up: "min-width: 576px"; //Small devices (landscape phones, 576px and up)
+$media-m-up: "min-width: 768px"; //Medium devices (tablets, 768px and up)
+$media-l-up: "min-width: 992px"; //Large devices (desktops, 992px and up)
+
+//COLORS
+$text-color-dark: #282828;
+$text-color-light-gray: #eaeaea;
+$text-color-dark-gray: #bbbbbb;
+$bg-color-dark: #282828;
+$bg-color-light: #f9f9f9;
+
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300&display=swap&subset=cyrillic-ext");
+$primary-font: "Comfortaa", sans-serif;
+
+//PARTIALS
+@import "partials/reset";
+@import "partials/layout";
+@import "partials/global";
+@import "partials/sprite";
+
+// HEADER
+header {
+  @include dark-section;
+
+  grid-area: header;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+// MAP SECTION
+.map-container {
+  grid-area: map;
+
+  svg {
+    path {
+      fill: #36622b;
+      cursor: pointer;
+
+      &:focus{
+        outline: none;
+      }
+
+      &:hover {
+        fill: #729d39;
+
+      }
+
+      &.active {
+        fill: #95c754;
+      }
+    }
+  }
+}
+
+// HEADER GROPU
+hgroup {
+  background-color: $bg-color-dark;
+  padding: 2rem 1rem 1rem;
+
+  h3 {
+    color: $text-color-light-gray;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    color: $text-color-dark-gray;
+  }
+
+  .title-today {
+    text-transform: capitalize;
+  }
+}
+
+// FORECAST SECTION
+.slider {
+  @include section-shadow-style;
+
+  grid-area: forecast;
+  position: relative;
+  width: 200px;
+  height: 270px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .slider-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .arrow {
+    width: 30px;
+    background: $bg-color-light;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform ease-in 0.1s;
+  }
+
+  .nextArrow,
+  .backArrow {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+  }
+
+  .nextArrow {
+    right: 5px;
+  }
+
+  .backArrow {
+    left: 5px;
+  }
+}
+
+// DAY CARD
+.day-card {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
+
+  .weather-info-holder {
+    padding: 1rem 0.5rem;
+
+    .min-max-temp {
+      font-size: 2.8rem;
+      line-height: 1;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .desc {
+      font-size: 1.5rem;
+      white-space: normal;
+    }
+  }
+}
+
+// DETAILED INFORMATION SECTION
+.detailed-info-section {
+  @include section-shadow-style;
+
+  grid-area: info;
+  align-self: start;
+
+  .info-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 1rem;
+
+    li {
+      display: flex;
+      flex: 1 1 100%;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0 0.5rem;
+      font-size: 1.3rem;
+
+      @media ($media-s-up) {
+        flex: 1 1 50%;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+// FOOTER
+footer {
+  @include dark-section;
+  grid-area: footer;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/*------------------------------------------------------
+HELPER CLASS
+------------------------------------------------------*/
+.to-capital-first-letter {
+  display: inline-block;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.info-msg {
+  grid-area: forecast;
+}
+
+.tooltip {visibility: hidden}
+#bulgaria:hover .tooltip {
+    visibility: visible;
+}
+.tooltip text {
+    fill: black;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.tooltip rect {
+    fill: yellow;
+    stroke: blue;
+}

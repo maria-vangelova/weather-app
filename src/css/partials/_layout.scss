@@ -1,0 +1,35 @@
+/*------------------------------------------------------
+LAYOUT
+------------------------------------------------------*/
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 10px 1fr 10px;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+  "header header header"
+  ". map ."
+  ". forecast ."
+  ". info ."
+  "footer footer footer";
+
+  @media ($media-s-up) {
+    grid-template-columns: 1fr 400px 200px 1fr;
+    grid-template-rows: auto 270px 1fr auto;
+    grid-template-areas:
+    "header header header header"
+    ". map forecast ."
+    ". info info ."
+    "footer footer footer footer";
+  }
+  @media ($media-m-up) {
+    min-height: 100vh;
+    grid-template-columns: 1fr 400px 200px 1fr;
+    grid-template-rows: auto 270px 1fr auto;
+  }
+  @media ($media-l-up) {
+    grid-template-columns: 1fr 450px 250px 1fr;
+    grid-template-rows: auto 300px 1fr auto;
+  }
+}

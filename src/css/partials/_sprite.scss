@@ -1,0 +1,133 @@
+/*------------------------------------------------------
+SVG ICONS
+------------------------------------------------------*/
+
+.icon-info {
+  background-image: url(./../assets/info-icons.svg);
+  margin-right: 1rem;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-weather {
+  background-image: url(./../assets/weather-icons.svg);
+  width: 100px;
+  height: 100px;
+}
+
+.icon-info,
+.icon-weather {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.pressure {
+  background-position: 0 0;
+}
+
+.max-temperature {
+  background-position: 0 -46px;
+}
+.humidity {
+  background-position: -46px -46px;
+}
+.f01d,
+.f01n,
+.r04d,
+.r04n,
+.r05d,
+.r05n,
+.r06d,
+.r06n {
+  background-position: 0 0;
+}
+.s01d,
+.s01n,
+.s02d,
+.s02n,
+.s03d,
+.s03n,
+.s04n,
+.s04d,
+.s06d,
+.s06n {
+  background-position: -116px 0;
+}
+.s05d,
+.s05n {
+  background-position: -232px 0;
+}
+.t01d,
+.t01n,
+.t02d,
+.t02n,
+.t03d,
+.t03n {
+  background-position: -348px 0;
+}
+.d01d,
+.d01n,
+.d02d,
+.d02n,
+.d03d,
+.d03n,
+.r01d,
+.r01n,
+.r02d,
+.r02n,
+.u00d,
+.u00n {
+  background-position: -464px 0;
+}
+.c01d,
+.c01n {
+  background-position: -580px 0;
+}
+.sunrise {
+  background-position: -92px -46px;
+}
+.sunset {
+  background-position: -138px -46px;
+}
+.min-temperature {
+  background-position: -184px -46px;
+}
+.a01d,
+.a01n,
+.a02d,
+.a02n,
+.a03d,
+.a03n,
+.a04d,
+.a04n,
+.a05d,
+.a05n,
+.a06d,
+.a06n {
+  background-position: -696px 0;
+}
+.wind {
+  background-position: -230px -46px;
+}
+.t04d,
+.t04n,
+.t05d,
+.t05n {
+  background-position: -812px 0;
+}
+.c04d,
+.c04n {
+  background-position: -928px 0;
+}
+.c03d,
+.c03n,
+.c02d,
+.c02n {
+  background-position: -1044px 0;
+}
+.circle-right {
+  background-position: 0 -92px;
+}
+.circle-left {
+  background-position: -46px -92px;
+}
